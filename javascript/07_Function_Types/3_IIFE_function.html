@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // IIFE function ==> Immediately Invoked Function Expression
+
+        //to execute statements on load of the file  in browser
+        //it canot be invoked by extrnal source
+        (function(){
+            console.log("hello i am IIFE function")
+        })();
+
+        // Example 2:
+        (function(a,b){
+            var sum=a+b;
+            console.log("the sum of two numbers: ", sum)
+        })(5,6);
+
+        // Example 3:
+       (function(name){
+            var formatedname = name.toUpperCase();
+            console.log("formated name: ",formatedname)
+       })("mounika") // o/p ==>formated name:  MOUNIKA
+
+        // Example 4:
+    
+
+        //  (function(){
+        //         var names=["mounika","veena","minnu","vamshi"]
+        //         console.log(names[0])}) () // INDEXING ===> o/p mounika
+        
+        // Example 5:
+        (function(){
+            var userInfo = {
+              fName:'mouni',
+              roles :['python developer','web developer'],
+              lname:'ka',
+              mobile:9823764935,
+              email : 'mounika@2334',
+              address:{
+                  flatNo:89,
+                  pinCode:7899,
+                  apartmentName:"nnsjxhs"
+              }
+            }
+            console.log(userInfo.email)
+            console.log(userInfo.fname)
+            console.log(userInfo.lname)
+            console.log(userInfo.roles[0])//python developer
+            console.log(userInfo.address)//{flatNo: 89, pinCode: 7899, apartmentName: 'nnsjxhs'}
+            console.log(userInfo.address.pinCode) //7899
+        })()
+
+         
+
+      
+
+    </script>
+</body>
+</html>

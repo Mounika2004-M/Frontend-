@@ -1,0 +1,63 @@
+//function 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Function defination is executed only when function is call it
+    //exampel1  
+    function caluculateSum(a,b){   // function defination
+            console.log(a,b);
+            var sum= a+b;
+            console.log("the sum of two numbers: ", sum)
+        }
+        caluculateSum(5,6);  // funcation call
+        caluculateSum(3,5);
+
+    // exampel2:
+
+    function substraction(a,b){
+        var product = a-b;
+        console.log("the substractionof two numbers: ", product)
+
+    }
+    substraction(4,1) 
+
+    // //exampel 3
+
+    function fullName(fname,lname){
+        var fullname=fname+' ' +lname
+        console.log("FULL NAME: ",fullname)
+
+    }
+    fullName('mounika','reddy')
+
+    // exampel 4  // without  using parameters
+    var lname="mounika"
+    function formatedLastName(){
+        var formatedlastname = lname.toUpperCase();
+         console.log("last name: ",formatedlastname)
+    }
+    formatedLastName()   // o/p ==>last name:  REDDY
+
+
+    // Return keyword ==> to pass the value from fun def to fun call
+    var lname="mounika"
+ function formatedLastName(){
+        var formatedlastname = lname.toUpperCase();
+         console.log(formatedlastname)
+        return formatedlastname
+ }
+      var lastName = formatedLastName()
+      console.log(lastName)
+
+      
+        
+    </script>
+</body>
+</html>

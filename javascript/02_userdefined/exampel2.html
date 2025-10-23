@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="pets-name"></h1>
+    <img src="" id="pets-image"  width="150", hight="150"/>
+    <h1 id="pets-price"></h1>
+    <h1 id="pets-discount"></h1>
+    <h1 id="pets-type"></h1>
+
+    <script>
+    var pets=  {
+       name: "cats",
+    image: [
+        "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg",
+        "https://cdn2.thecatapi.com/images/9j5.jpg",
+        "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg",
+        "https://cdn2.thecatapi.com/images/bpc.jpg" ],
+    price: 1200,
+    discount: 6,
+    types: ["Fluffy", "Mittens","Whiskers", "Shadow",]
+        
+
+    }
+
+    var dis=pets.price-(pets.price-pets.discount*100)
+    console.log(dis)
+    
+    pets.discount=dis
+
+   console.log(pets.name)
+   
+   document.getElementById("pets-name").innerHTML=pets.name
+   document.getElementById("pets-image").src=pets.image[1]
+   document.getElementById("pets-price").innerHTML=pets.price
+   document.getElementById("pets-discount").innerHTML=pets.discount
+   document.getElementById("pets-type").innerHTML=pets.types[1]
+
+
+
+    </script>
+    
+    
+</body>
+</html>
+    

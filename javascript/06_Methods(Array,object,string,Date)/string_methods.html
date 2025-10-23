@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <scripr>
+        var str='localeCompare is a JavaScript string method used to compare two JavaScript  strings in a way that respects JavaScript alphabetical order and language-specific rules'
+        console.log(str[0])  // o/p ==> l
+
+        console.log(str.length) // o/p ==> 138
+
+        console.log(str.toUpperCase()) // o/p ==> LOCALECOMPARE IS A JAVASCRIPT STRING METHOD USED TO COMPARE TWO STRINGS IN A WAY THAT RESPECTS ALPHABETICAL ORDER AND LANGUAGE-SPECIFIC RULES
+
+        console.log(str.toLowerCase()) // o/p ==> localecompare is a javascript string method used to compare two strings in a way that respects alphabetical order and language-specific rules
+
+        console.log(str.indexOf('javascript')) // o/p ==> 18 //starting index it will 
+        
+        console.log(str.lastIndexOf('JavaScript')) // o/p ==> 38
+        
+        console.log(str.slice(0,16)) // o/p ==> localeCompare is a
+        
+        console.log(str.slice(5)) // o/p ==> compare is a JavaScript string
+
+        console.log(str.substr(0,16)) // o/p ==> localeCompare is a
+
+        console.log(str.substr(0,5).toUpperCase()) // o/p ==> LOCALE
+
+        console.log(str.replace('JavaScript','JS')) // o/p ==> localeCompare is a JS string method used to compare two strings in a way that respects alphabetical order and language-specific rules
+
+        console.log(str.CharAt(3)) // o/p ==> a
+
+
+
+    // the number converted into string formate 
+     var number = '7406932764'
+
+     var formattedMobileNo = '+91'.concate(' '+number.slice(0,3)+' '+(number.slice(3,7))+' '+number.slice(7,10))
+        console.log(formattedMobileNo) // o/p ==> +91 740 6932 764
+
+
+
+    </scripr>
+</body>
+</html>

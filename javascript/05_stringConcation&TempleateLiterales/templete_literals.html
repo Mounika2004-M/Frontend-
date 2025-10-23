@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal Style Sheet -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        div {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="email-template">
+
+    </div>
+
+    <script>
+
+        var firstName = 'K';
+        var lastName = 'Varun';
+        var fullName = firstName + ' ' + lastName;
+
+        var address = {
+            houseNumber: "45B",
+            street: "Park Street",
+            city: "Kolkata",
+            state: "West Bengal",
+            postalCode: "700016",
+            country: "India"
+        };
+
+        // 45B, Park Street, Kolkata, West Bengal, India. 700016.
+        // var addressStr = address.houseNumber + ', ' + address.street + ', ' + address.city + ', ' + address.state + ', ' + address.country + '. ' + address.postalCode;
+
+        // console.log(addressStr);
+
+        // var addressStr = ${address.houseNumber}, ${address.street}, ${address.city}, ${address.state}, ${address.country}. ${address.postalCode};
+
+        // console.log(addressStr);
+
+        var sessionInfo = {
+            title: "Python-2513",
+            batchCode: "FS-Basic-2516",
+            startDate: "2025-08-07",
+            time: "09:30 AM IST",
+            mode: ["Online", "Classroom"],
+            classroom: {
+                floor: "2nd Floor",
+                roomNo: "2C"
+            },
+            online: {
+                platform: "Zoom",
+                topic: "FS-Basic-2516",
+                joinLink: "https://us06web.zoom.us/j/86529526857?pwd=IbB68ReUc25B3mkb8lyLfnmRpXBcOj.1",
+                meetingId: "865 2952 6857",
+                passcode: "922941"
+            }
+        };
+
+        var emailTemplate = `
+            <p><b>Dear All,</b></p>
+
+                <p>Greetings from Digital Edify!</p>
+
+                <p>We are pleased to inform you that your ${sessionInfo.title} sessions are scheduled to begin from tomorrow, ${sessionInfo.startDate}, at ${sessionInfo.time}.</p>
+
+                <ul>
+                    <li>Mode: <b>${sessionInfo.mode}</b></li>
+
+                    <li>Classroom Location: <b>${sessionInfo.classroom.floor}</b>, Room No.<b> ${sessionInfo.classroom.roomNo}</b></li>
+
+                    <li>Online Participants: Please join using the link below:</li>    
+                </ul>
+
+                <p>Zoom Meeting Details</p>
+
+                <ul>
+                    <li>Topic: <b>${sessionInfo.online.topic}</b></li>
+
+                    <li>Time: <b>${sessionInfo.time}</b></li>
+
+                    <li>Join Link: <b>${sessionInfo.online.joinLink}</b></li>
+
+                    <li>Meeting ID: <b>${sessionInfo.online.meetingId}</b></li>
+
+                    <li>Passcode: <b>${sessionInfo.online.passcode}</b></li>    
+                </ul>
+
+                <p>We look forward to your active participation.</p>
+
+
+                <p>Thanks and Regards,</p>
+                <p>Digital Edify</p>
+                <p>Support Team</p>
+                <p>+91 6304982305</p>
+        `;
+
+        console.log(emailTemplate);
+
+        document.getElementById('email-template').innerHTML = emailTemplate;
+    </script>
+</body>
+</html>

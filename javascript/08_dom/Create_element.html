@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="laptopDetails-ul"></ul>
+
+  <table >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Available</th>
+      </tr>
+    </thead>
+    <tbody id="contact-tabel"></tbody>
+  </table>
+
+  <script>
+    var laptopDetails = [
+      "HP 15 (2025), AMD Ryzen 3 7320U Quad Core - (16 GB/512 GB SSD/AMD Radeon Graphics) Thin and Light Business Laptop",
+      "Rating: 2 stars",
+      "200+ bought in past month",
+      "Price: ₹28,490",
+      "M.R.P: ₹78,690 (64% off)",
+      "Prime: FREE delivery Wed, 10 Sept",
+      "Service: Device Setup",
+      "More Buying Choices: ₹28,450 (9 new offers)"
+    ];
+
+    var laptopDetailsul = document.getElementById('laptopDetails-ul');
+    for (var i = 0; i < laptopDetails.length; i++) {
+      var li = document.createElement('li');
+      li.innerHTML = laptopDetails[i];
+      laptopDetailsul.appendChild(li);
+    }
+
+    var contacts = [
+      { id: 1, name: "Rahul Sharma", phone: "9876543210", email: "rahul.sharma@example.com", available: true },
+      { id: 2, name: "Priya Verma", phone: "9123456780", email: "priya.verma@example.com", available: false },
+      { id: 3, name: "Amit Kumar", phone: "9988776655", email: "amit.kumar@example.com", available: true },
+      { id: 4, name: "Sneha Reddy", phone: "9090909090", email: "sneha.reddy@example.com", available: true }
+    ];
+
+    var contactTable = document.getElementById('contact-tabel');
+
+    for (var i = 0; i < contacts.length; i++) {
+      var tr = document.createElement('tr');
+
+      var idTd = document.createElement('td');
+      idTd.innerHTML = contacts[i].id;
+      tr.appendChild(idTd);
+
+      var nameTd = document.createElement('td');
+      nameTd.innerHTML = contacts[i].name;
+      tr.appendChild(nameTd);
+
+      var phoneTd = document.createElement('td');
+      phoneTd.innerHTML = contacts[i].phone;
+      tr.appendChild(phoneTd);
+
+      var emailTd = document.createElement('td');
+      emailTd.innerHTML = contacts[i].email;
+      tr.appendChild(emailTd);
+
+      var availTd = document.createElement('td');
+      availTd.innerHTML = contacts[i].available ? "Yes" : "No";
+      tr.appendChild(availTd);
+
+      contactTable.appendChild(tr);
+    }
+  </script>
+</body>
+</html>

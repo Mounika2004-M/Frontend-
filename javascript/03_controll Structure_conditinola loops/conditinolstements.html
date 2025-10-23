@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Example with Images</title>
+  <style>
+    .menu {
+      width: 250px;
+      font-family: Arial, sans-serif;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-bottom: 1px solid white;
+      cursor: pointer;
+    }
+    .menu-item:hover {
+      background-color: gray;
+    }
+    .menu-item img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-item" onclick="showCategory('all')">
+      <img src="https://img.icons8.com/color/48/vegetarian-food.png" alt="All">
+      <span>All</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('vegetables')">
+      <img src="https://img.icons8.com/color/48/broccoli.png" alt="Vegetables">
+      <span>Fresh Vegetables</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('fruits')">
+      <img src="https://img.icons8.com/color/48/apple.png" alt="Fruits">
+      <span>Fresh Fruits</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('exotics')">
+      <img src="https://img.icons8.com/color/48/avocado.png" alt="Exotics">
+      <span>Exotics & Premium</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('flowers')">
+      <img src="https://img.icons8.com/color/48/rose.png" alt="Flowers">
+      <span>Flowers & Leaves</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('herbs')">
+      <img src="https://img.icons8.com/color/48/basil.png" alt="Herbs">
+      <span>Leafy, Herbs & Seasonings</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('organics')">
+      <img src="https://img.icons8.com/color/48/organic-food.png" alt="Organics">
+      <span>Organics & Hydroponics</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('plants')">
+      <img src="https://img.icons8.com/color/48/potted-plant.png" alt="Plants">
+      <span>Plants & Gardening</span>
+    </div>
+    <div class="menu-item" onclick="showCategory('cuts')">
+      <img src="https://img.icons8.com/color/48/salad.png" alt="Cuts">
+      <span>Cuts & Sprouts</span>
+    </div>
+  </div>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function showCategory(category) {
+      let message = "";
+
+      if (category === "all") {
+        message = "Showing All Items";
+      }
+      if (category === "vegetables") {
+        message = "Showing Fresh Vegetables";
+      }
+      if (category === "fruits") {
+        message = "Showing Fresh Fruits";
+      }
+      if (category === "exotics") {
+        message = "Showing Exotics & Premium";
+      }
+      if (category === "flowers") {
+        message = "Showing Flowers & Leaves";
+      }
+      if (category === "herbs") {
+        message = "Showing Leafy, Herbs & Seasonings";
+      }
+      if (category === "organics") {
+        message = "Showing Organics & Hydroponics";
+      }
+      if (category === "plants") {
+        message = "Showing Plants & Gardening";
+      }
+      if (category === "cuts") {
+        message = "Showing Cuts & Sprouts";
+      }
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+</body>
+</html>

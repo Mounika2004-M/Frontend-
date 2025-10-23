@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employees = [
+        "Mounika",
+        "Veera",
+        "Reddy",
+        "Sita",
+        "Ramesh"];
+
+
+    
+    // without using include() method
+    // for(var i=0 ;i<employees.length;i++){
+    //     var emp = employees[i];
+    //     if (emp === "Mounika"){
+    //         console.log(present);
+    //     }
+    // }
+
+
+    // 1   using include() method
+    var searchName = "Mounika";
+    var isPresent = employees.includes(searchName);
+     console.log(isPresent);  //True
+
+    //2   using indexOf() method
+    var index = employees.indexOf(searchName);
+    console.log(index); // -1 // if not present it will return -1
+     console.log(index); // 0 // if present it will return index value
+   
+    // 3  using push() method ==> insert last index
+    employees.push("Anil");
+    console.log(employees);
+
+    // 4 using pop() method ==> remove last index
+    employees.pop();
+    console.log(employees);
+
+    // 5 splice() method ==> it will remove or replace or add elements in between the array
+     var newEmp=employees.splice(1,4)
+     console.log(newEmp); //  ['Veera', 'Reddy', 'Sita', 'Ramesh']
+     
+    employees.splice(0,3 ,'Vamshi')
+    console.log(employees); // ['Vamshi', 'Sita', 'Ramesh']
+     
+    employees.splice(1,1,'Vamshi') // delete and replace
+     console.log(employees); //['Mounika', 'Vamshi', 'Reddy', 'Sita', 'Ramesh']
+
+    employees.splice(1,0,'Vamshi')   // only insert
+    console.log(employees); //['Mounika', 'Vamshi', 'Veera', 'Reddy', 'Sita', 'Ramesh']  
+
+    // 6 slice() method ==> it will create new array
+    var newEmp = employees.slice(0,2)
+    console.log(newEmp); // ['Veera']
+
+    // 7 concat() method ==> it will merge two arrays
+    var emp1 = ["Mounika","Veera"]  
+    var emp2 = ["Reddy","Sita"]
+    var emp4 = ["Ramesh"]
+    var emp5 = ["Anil","Sunil"]
+    var emp3 = emp1.concat(emp2,emp4,emp5)
+    console.log(emp3); // ['Mounika', 'Veera', 'Reddy', 'Sita']
+
+  // 8 sort() method ==> it will sort the array in ascending order
+    var emp = ["Mounika","Veera","Reddy","Sita","Ramesh"]
+    emp.sort();
+    console.log(emp); // ['Mounika', 'Ramesh', 'Reddy', 'Sita', 'Veera']
+   
+ // 9 reverse() method ==> it will sort the array in descending order
+    // emp.reverse();
+    // console.log(emp); // ['Veera', 'Sita', 'Reddy', 'Ramesh', 'Mounika']
+    
+// or
+    emp.sort().reverse();
+    console.log(emp); // ['Veera', 'Sita', 'Reddy', 'Ramesh', 'Mounika']
+
+var transactions = [
+  {
+    id: 1,
+    date: "2025-08-30",
+    amount: 500,
+    type: "credit",
+    description: "Salary"
+  },{
+    id: 2,
+    date: "2025-08-31",
+    amount: 200,
+    type: "debit",
+    description: "Grocery shopping"
+  },
+  {
+    id: 3,
+    date: "2025-09-01",
+    amount: 150,
+    type: "debit",
+    description: "Electricity bill"
+  },
+  {
+    id: 4,
+    date: "2025-11-02",
+    amount: 1000,
+    type: "credit",
+    description: "Freelance payment"
+  },
+  {
+    id: 5,
+    date: "2025-10-03",
+    amount: 300,
+    type: "debit",
+    description: "Restaurant"
+  }
+];
+
+var sortedTransactuions = transactions.sort(function(a,b){
+    // return new Date(b.date) - new Date(a.date);
+     return b.amount - a.amount;  // ascending order
+})
+console.log(sortedTransactuions);
+
+
+    </script>
+</body>
+</html>

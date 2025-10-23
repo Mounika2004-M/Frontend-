@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // exampel1
+        var selectedValue=3
+        switch(selectedValue){
+            case 1:{
+                console.log("selected the value", 1)
+                break
+            }
+            case 2:{
+                console.log("selected the value",2)
+                break
+            }
+            case 3:{
+                console.log("selected the value", 3)
+                break
+            }
+            default :{
+                console.log("Invalid selectoer")
+            }
+
+        }
+
+        //Exampel 2
+    //Booking Movie ticket
+    // sunday=250 monday=350-----
+    //  by deafult in js 0-sun 1-mon 2-tue 3-wed 4-thus 5-fri 6-sat
+      
+    var  today=new Date().getDay()
+    // var today=0 ---> optinol
+    console.log(today)
+    
+    var  ticketPrice;
+
+    switch(today){
+        case 0:{
+            ticketPrice=250
+            break
+        }
+         
+         case 2:{
+            ticketPrice=200
+            break
+        }
+         case 3:{
+            ticketPrice=300
+            break
+         }
+         case 5:{
+            ticketPrice=500
+            break
+        }
+         case 6:{
+            ticketPrice=600
+            break
+        }
+    default :{
+        ticketPrice=200
+    }
+    }
+    console.log("Today ticket Price is: ", ticketPrice)
+    
+
+
+    // Exampel 3
+    // Customer support chatbot
+
+    
+    </script>
+</body>
+</html>

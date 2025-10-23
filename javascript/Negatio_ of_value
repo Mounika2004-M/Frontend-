@@ -1,0 +1,45 @@
+// Negation of value
+                            var x = 5
+                            console.log(-x);  // ==> -5
+                            var x = 5
+                            var y = 8
+                            console.log(y-x); // ==> 3
+                            console.log(y - -x);  // ==> 13
+
+
+//Number conversion with +
+
+                        var x = '10';
+                        typeof x //=> string
+                        typeof +x //==> number
+                        console.log(10+'10'); //==> '1010'
+                        console.log(10+ +'10') //==> 20
+                        console.log(10+10+'10') //==> 2010
+                        console.log(10+10+ +'10'); //==> '30'   its using unary Operatoer its converts string into number, its representes(+)
+                        console.log('5'+10+10); //==> '51010'
+                        console.log(+'5'+10+10); //==> 25
+
+
+                        var a = 5;
+                        var b = 6;
+                        var c = 10 - (a = b - 4);
+                        console.log(c); //==> 8
+                        console.log(a); // ==> 2
+
+                        var x,y;
+                        x = y = 2 + 4;
+                        console.log(x);  //==> 6
+                        console.log(y);  //==> 6
+
+                        // #modify-in place
+                        var x = 10;
+                        x = x + 20;
+                        console.log(x);
+
+                        x = 5;
+                        x+=4;  //==>  x = x + 4
+                        console.log(x); //==> 9
+
+                        var x = 10;
+                        x*=4;   // x = x * 4
+                        console.log(x); //==> 40

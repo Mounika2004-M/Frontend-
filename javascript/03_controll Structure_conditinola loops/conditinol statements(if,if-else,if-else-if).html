@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\mouni\OneDrive\Desktop\JAVASCRIPT\controll Structure\style.css"/>
+</head>
+<body>
+    
+    <div>
+        <label>Adhar NUmber</label>
+        <input type="text" placeholder="Enter AdharNumber" id="validate-id"/>
+        
+    </div>
+    <button onclick="validateAdarNum ()">validate</button>
+    <h2 id="message"></h2>
+
+
+
+    <ul>
+        <li onclick="onChangeCurrentTab('home')" id="home">Home</li>
+        <li onclick="onChangeCurrentTab('profile')" id="profile">Profile</li>
+        <li onclick="onChangeCurrentTab('meating')" id="meating">meating</li>
+        <li onclick="onChangeCurrentTab('webinar')" id="webinar" >Webinar</li>
+        <li onclick="onChangeCurrentTab('events')" id="events">events</li>
+    
+    </ul>
+
+
+
+    <script>
+
+    // if 
+        var name='mounika'
+        if(name == 'mounika'){
+            console.log("both are match") // both are match
+        }
+         if(true){
+            console.log("both are match") // both are match
+        }
+    
+
+
+    // if else
+
+
+
+    var userLogidIn  = true
+    if(userLogidIn){
+        console.log("user loged in")
+    }
+    else {
+        console.log("not user loged in") 
+    }                                   //// user loged in
+    var userLogidIn  = false
+    if(userLogidIn){
+        console.log("user loged in")
+    }
+    else {
+        console.log("not user loged in") 
+    }                                   //not user loged in
+
+
+
+    //exampel
+    function validateAdarNum (){
+        var uadharNumber=parseInt(document.getElementById('validate-id').value);  // parseInt it coverts string into numericales
+        var dbAdharNumber=9999
+        if(uadharNumber===dbAdharNumber){
+           document.getElementById('message').innerHTML='Adhar is valid'
+        }
+        else{
+             document.getElementById('message').innerHTML='Adhar is not valid'
+        }
+    }
+    
+    function onChangeCurrentTab(selectedTab){
+         document.getElementById('home').classList.remove('active')
+          document.getElementById('profile').classList.remove('active')
+          document.getElementById('meating').classList.remove('active')
+          document.getElementById('webinar').classList.remove('active')
+          document.getElementById('events').classList.remove('active')
+
+       if (selectedTab=="home"){
+        document.getElementById('home').classList.add('active')
+         
+       }
+       else if (selectedTab=="profile"){
+        document.getElementById('profile').classList.add('active')
+       } else if (selectedTab=="meating"){
+        document.getElementById('meating').classList.add('active')
+       }
+        else if (selectedTab=="webinar"){ 
+        document.getElementById('webinar').classList.add('active')
+       }
+       else  
+       { 
+        document.getElementById('events').classList.add('active')
+       }
+       
+       
+    
+    }
+    </script>
+</body>
+</html>

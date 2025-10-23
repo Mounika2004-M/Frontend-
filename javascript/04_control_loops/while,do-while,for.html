@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   //While
+    // exampel
+        // var i=0
+        // while(i<5){
+        //     console.log('Iteration:', i)
+        //     i++;
+        // }
+
+    // exampel 2
+        // var enterPassword=window.prompt('Enter you password')
+
+        // console.log(enterPassword)
+
+    //     var correctPassword ="1234"
+    //      var enterPassword=window.prompt('Enter you password')
+
+    //      while (enterPassword != correctPassword){
+    //         alert('incorrect password try again')
+    //         enterPassword=prompt('Enter you password')
+            
+    //      }
+    //      alert('login successful')
+
+    // // exampel 3
+    // //20% download -10gb
+    // var progress=0
+    // while  (progress<100){
+    //     progress+=10
+    //     console.log('Download progress',progress, '%')
+
+    // } //if condition false for every ieteration , it wont execute the stements
+        
+   //do while
+//    progress =0 
+//     do{
+//         progress+=10
+//         console.log('Download progress',progress, '%')
+//     }
+//     while(progress<0)
+  
+
+// // ATM withdraw
+//     var choice;
+//     do {
+//         choice=prompt("ATM Menu: \n 1. Withdrwar\n 2.Check Balence\n 3.Exit")
+//         switch(choice){
+//             case '1':{
+//                 alert('withdraw sucessful')
+//                 break
+//             }
+//             case '2':{
+//                 alert('chech balence sucessful')
+//                 break
+//             }
+//             case '3':{
+//                 alert('thank you for using our Atm services')
+//                 break
+//             }
+//             default:{
+//                 alert('invalid choice')
+//             }
+            
+//         }
+//     }while(choice !=3)
+   
+//for loop
+
+
+var  employees = [
+  {
+    id: 101,
+    name: "John Doe",
+    designation: "Software Engineer",
+    salary: 55000,
+    skills: ["JavaScript", "React", "Node.js"]
+  },
+  {
+    id: 102,
+    name: "Jane Smith",
+    designation: "UI/UX Designer",
+    salary: 48000,
+    skills: ["Figma", "Photoshop", "Illustrator"]
+  },
+  {
+    id: 103,
+    name: "Mike Johnson",
+    designation: "Data Analyst",
+    salary: 60000,
+    skills: ["Python", "SQL", "Power BI"]
+  }
+];
+for(var i=0; i<employees.length; i++){
+    console.log(employees[i])
+}
+
+//example
+var marks =[90, 67, 86,45,35,76];
+ var sum=0;
+ for ( var i=0; i<marks.length; i++){
+    sum += marks[i]
+ }
+ console.log(sum)
+
+
+
+
+
+    </script>
+</body>
+</html>

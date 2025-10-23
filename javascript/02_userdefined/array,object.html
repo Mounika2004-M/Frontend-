@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // ARRAY : Collection of values
+        var names=["mounika","veena","minnu","vamshi"]
+        console.log(names[0])  // INDEXING ===> o/p mounika
+
+        var matrix = [[2,3],[4,5]]
+        console.log(matrix[0][0]) // o/p ===> 2
+         console.log(matrix[1][1]) // o/p ===> 5
+
+        var matrix =[ ['mouni',29],
+                       ['minnu',90],
+                       ['chinnu',89] ]
+        console.log(matrix[2][0])  // o/p ==> chinnu
+
+    // objects : collection of key value pair
+
+      var userInfo = {
+        fName:'mouni',
+        roles :['python developer','web developer'],
+        lname:'ka',
+        mobile:9823764935,
+        email : 'mounika@2334',
+        address:{
+            flatNo:89,
+            pinCode:7899,
+            apartmentName:"nnsjxhs"
+        }
+        // To retrive data  synatx:varibelName.keyName
+
+      }
+      console.log(userInfo.email)
+      console.log(userInfo.fname)
+      console.log(userInfo.lname)
+      console.log(userInfo.roles[0])//python developer
+      console.log(userInfo.address)//{flatNo: 89, pinCode: 7899, apartmentName: 'nnsjxhs'}
+      console.log(userInfo.address.pinCode) //7899
+    
+
+      
+    </script>
+</body>
+</html>

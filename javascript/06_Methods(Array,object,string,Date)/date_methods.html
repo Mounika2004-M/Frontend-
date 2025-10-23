@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var dateObj = new Date();
+    console.log(dateObj) //Sat Aug 30 2025 19:48:48 GMT+0530 (India Standard Time)  
+    
+    console.log(dataobj.getDate()) //30
+    console.log(dateObj.getDay()) //6
+    console.log(dateObj.getFullYear()) //2025
+    console.log(dateObj.getHours()) //19
+    console.log(dateObj.getMinutes()) //48      
+    console.log(dateObj.getSeconds()) //48
+    console.log(dateObj.getMonth()) //7  (month starts from 0 to 11)
+    console.log(dateObj.getMilliseconds()) // 123
+    console.log(dateObj.getTime()) // 1745886528123  (time in milliseconds from 1970 to now)
+    console.log(dateObj.getTimezoneOffset()) // -330  (time zone difference in minutes from UTC to current locale)
+    
+       
+
+
+
+    set.Date(31)
+    console.log(dateObj) //Sun Aug 31 2025 19:48:48 GMT+0530 (India Standard Time)
+    dateObj.setFullYear(2023)
+    console.log(dateObj) //Thu Aug 31 2023 19:48:48 GMT+0530 (India Standard Time)
+    dateObj.setMonth(0)
+    console.log(dateObj) //Tue Jan 31 2023 19:48:48 GMT+0530 (India Standard Time)
+    dateObj.setHours(10)
+    console.log(dateObj) //Tue Jan 31 2023 10:48:48 GMT+0530 (India Standard Time)
+    dateObj.setMinutes(30)
+    console.log(dateObj) //Tue Jan 31 2023 10:30:48 GMT+0530 (India Standard Time)
+
+
+   var dateStr=`${dateobj.getDate()}-${dateobj.getMonth()+1}-${dateobj.getFullYear()} ${dateobj.getHours()}:${dateobj.getMinutes()}:${dateobj.getSeconds()}`
+    console.log(dateStr) //30-8-2025 19:48:48
+    
+
+
+    </script>
+
+</body>
+</html>

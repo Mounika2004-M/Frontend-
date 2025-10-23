@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Form</title>
+  <script src="formvalidation.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .container { max-width: 350px; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-actions {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 14px;
+      border: none;
+      background: #0066ff;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .error-msg {
+      margin: 0px;
+      color: red;
+      font-size: 14px;
+    }
+
+    .password-msg{
+      margin: 4px ;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <h2>Registration Form</h2>
+ 
+  <div class="container">
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" placeholder="Enter your name" onkeyup="clearValidationMsgs()">
+      <p id="fullname-msg" class="error-msg"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" onkeyup="clearValidationMsgs()">
+      <p id="email-msg" class="error-msg"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" onkeyup="clearValidationMsgs()">
+      <p id="phone-msg" class="error-msg"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" onkeyup="clearValidationMsgs()">
+      <!-- <p id="password-msg" class="error-msg"></p> -->
+      <p class="password-msg">Minimum 11 to Maximum 15 characters allowed.</p>
+       <p class="password-msg">Password must contain at least one small and one capital alphabet.</p>
+       <p class="password-msg">At least one Numeric digit and one special character (@#$%^&* etc.)</p>
+      
+    </div>
+
+    <div class="form-actions">
+      <!-- ✅ Use type="button" so it doesn’t refresh the page -->
+      <button type="button" onclick="submitForm()">Submit</button>
+    </div>
+  </div>
+
+</body>
+</html>

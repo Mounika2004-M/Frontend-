@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* 🔹 Flex layout */
+      .product-flex {
+        display: flex;
+        flex-wrap: wrap; /* multiple rows */
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        flex: 0 0 260px; /* fixed width */
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .card-img {
+        position: relative;
+      }
+
+      .card-img img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .price-tag {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .card-content {
+        padding: 12px 15px;
+      }
+
+      .restaurant-name {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+
+      .rating-time {
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .rating {
+        color: green;
+        font-weight: bold;
+      }
+
+      .categories {
+        font-size: 14px;
+        color: #777;
+        margin: 3px 0;
+      }
+
+      .location {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Food Products</h1>
+    <div class="product-flex" id="product-Container"></div>
+
+    <script>
+      var products = [
+        {
+          name: "Jashan Juice and Pizza one",
+          price: "₹19",
+          time: "35-40 mins",
+          rating: "4.3",
+          categories: "Beverages, Juices",
+          location: "Feelkhana",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2f2a8e30d98db46c6507105f68151cf9",
+        },
+        {
+          name: "Burger Hub",
+          price: "₹99",
+          time: "20-30 mins",
+          rating: "4.5",
+          categories: "Fast Food, Snacks",
+          location: "Banjara Hills",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2024/11/30/b7e9a6e9-41ca-47f7-b7a8-104662a1222d_3194f4f5-04a0-4594-810e-f49e465ba731.jpg",
+        },
+        // ... keep your other 48 products here
+        {
+          name: "Sweet Cake Shop",
+          price: "₹199",
+          time: "30-35 mins",
+          rating: "4.2",
+          categories: "Bakery, Desserts",
+          location: "Mehdipatnam",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Taiba Bakery And Cafe",
+          price: "₹20",
+          time: "25-30 mins",
+          rating: "4.2",
+          categories: "Pizzas, Fast Food, Cafe",
+          location: "Red Hills",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/kksbl6b8fmbuziv0zohs",
+        },
+        {
+          name: "Spicy Biryani House",
+          price: "₹249",
+          time: "40-50 mins",
+          rating: "4.6",
+          categories: "Biryani, Indian",
+          location: "Ameerpet",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Healthy Green Salads",
+          price: "₹149",
+          time: "20-25 mins",
+          rating: "4.1",
+          categories: "Salads, Healthy Food",
+          location: "Madhapur",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/TopPicks2024/137031254E.png",
+        },
+        {
+          name: "Dominoes Pizza",
+          price: "₹299",
+          time: "25-30 mins",
+          rating: "4.4",
+          categories: "Pizzas, Fast Food",
+          location: "Kukatpally",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/3/9/bbbe6acc-c29d-4ea1-94f0-42100a72052c_11976cba-e3e5-4163-8bac-2e4b2795539d.jpg",
+        },
+        {
+          name: "Choco Delight Cafe",
+          price: "₹179",
+          time: "30-35 mins",
+          rating: "4.2",
+          categories: "Cafe, Desserts",
+          location: "Hitech City",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/5137224834177e154249e83594895ad4",
+        },
+        {
+          name: "Fresh Fruit Juices",
+          price: "₹59",
+          time: "15-20 mins",
+          rating: "4.0",
+          categories: "Juices, Beverages",
+          location: "Secunderabad",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ywze5jygxq9bflitvmdy",
+        },
+        {
+          name: "Punjabi Dhaba",
+          price: "₹220",
+          time: "35-45 mins",
+          rating: "4.5",
+          categories: "North Indian, Dhaba",
+          location: "Begumpet",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Tandoori Flames",
+          price: "₹300",
+          time: "40-50 mins",
+          rating: "4.6",
+          categories: "Tandoori, Indian",
+          location: "Tolichowki",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ywze5jygxq9bflitvmdy",
+        },
+        {
+          name: "Idli Dosa Tiffins",
+          price: "₹60",
+          time: "20-25 mins",
+          rating: "4.1",
+          categories: "South Indian, Breakfast",
+          location: "Abids",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Shawarma Nation",
+          price: "₹150",
+          time: "25-30 mins",
+          rating: "4.3",
+          categories: "Shawarma, Fast Food",
+          location: "Masab Tank",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Idli Dosa Tiffins",
+          price: "₹60",
+          time: "20-25 mins",
+          rating: "4.1",
+          categories: "South Indian, Breakfast",
+          location: "Abids",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+        {
+          name: "Shawarma Nation",
+          price: "₹150",
+          time: "25-30 mins",
+          rating: "4.3",
+          categories: "Shawarma, Fast Food",
+          location: "Masab Tank",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/26/7000f789-17f0-40e0-85a9-23f702fb0831_956288.jpg",
+        },
+      ];
+
+      const productsDiv = document.getElementById("product-Container");
+      let productsList = "";
+
+      for (let i = 0; i < products.length; i++) {
+        let p = products[i];
+        productsList += `
+        <div class="card">
+          <div class="card-img">
+            <img src="${p.img}" alt="${p.name}">
+            <div class="price-tag">ITEMS AT ${p.price}</div>
+          </div>
+          <div class="card-content">
+            <div class="restaurant-name">${p.name}</div>
+            <div class="rating-time">
+              <span class="rating">★ ${p.rating}</span> • 
+              <span>${p.time}</span>
+            </div>
+            <div class="categories">${p.categories}</div>
+            <div class="location">${p.location}</div>
+          </div>
+        </div>
+      `;
+      }
+
+      productsDiv.innerHTML = productsList;
+    </script>
+  </body>
+</html>

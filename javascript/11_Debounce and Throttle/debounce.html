@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debounce Example</title>
+</head>
+<body>
+  <h2>Debounce Example</h2>
+  <input type="text" id="search" placeholder="Type something..." />
+
+  <script>
+    function debounce(func, delay) {
+      let timer;
+      return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
+    const handleInput = () => {
+      console.log('Searching for:', document.getElementById('search').value);
+    }
+
+    const debouncedInput = debounce(handleInput, 10000);
+    document.getElementById('search').addEventListener('input', debouncedInput);
+  </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Debounce Button Click</title>
+</head>
+<body>
+  <h2>Debounce Button Click Example</h2>
+  <button id="clickBtn">Click Me Fast!</button>
+
+  <script>
+    function debounce(func, delay) {
+      let timer;
+      return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
+    const handleClick = () => {
+      console.log('Button clicked at', new Date().toLocaleTimeString());
+    }
+
+    const debouncedClick = debounce(handleClick, 2000);
+    document.getElementById('clickBtn').addEventListener('click', debouncedClick);
+  </script>
+</body>
+</html> -->
+

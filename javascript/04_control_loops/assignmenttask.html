@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var users = [];
+        
+        // insert a new value into array at last index position 
+        users.push('mounika')
+        users.push('anu')
+        console.log(users)
+
+    // create a array of voters information whic as age parameter.
+     voters=[
+         {
+    id: 101,
+    name: "John Doe",
+    age: 18
+  },
+  {
+    id: 102,
+    name: "John Doe",
+    age: 32
+  },
+  {
+    id: 103,
+    name: "John Doe",
+    age: 9
+  },
+  {
+    id: 104,
+    name: "John Doe",
+    age: 89
+  },
+
+     ]
+var voters_age=[]
+var voters_age1=[]
+for(var i=0; i<voters.length; i++){
+    if(voters[i].age >= 18 && voters[i].age <= 35) {
+        voters_age.push(voters[i].age);
+    } else if (voters[i].age >= 40) {
+      voters_age1.push(voters[i].age);
+    }
+}
+console.log(voters_age)
+console.log(voters_age1)
+
+
+    </script>
+</body>
+</html>

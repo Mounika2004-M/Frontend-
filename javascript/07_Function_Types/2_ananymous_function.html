@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Ananymous function
+    // A function without a name is called an anonymous function and is often not accessible after its
+    
+    var companyName ='TCS'
+    console.log(window) // o/p ==> Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+   
+    var accountInfo={
+        accountNo:123456,
+        pin:456,
+        name:"mounikaa",
+        validateDetailes:function(accountNo,pin){
+            if (this.accountNo == accountNo && this.pin == pin){
+                console.log("login successfull")
+                console.log("welcome to ",companyName)
+
+        }
+        else{
+            console.log("invalid details")
+        }
+    }
+}
+// console.log(accountInfo.validateDetailes(123456,456)) // o/p ==> login successfull
+
+console.log(accountInfo.validateDetailes(123456,40086))  // o/p ==> invalid details
+
+
+
+
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

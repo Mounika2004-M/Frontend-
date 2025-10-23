@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var products = 
+        {
+          name: "Jashan Juice and Pizza one",
+          price: "₹19",
+          time: "35-40 mins",
+          rating: "4.3",
+          categories: "Beverages, Juices",
+          location: "Feelkhana",
+          img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2f2a8e30d98db46c6507105f68151cf9",
+        }
+       
+    //    var copiedProducts= products 
+    //      console.log(copiedProducts)
+    //     copiedProducts.name ="Mounika"
+    //     console.log(copiedProducts)
+    //     console.log(products) 
+        
+    // 1   obje.assign()  ==> to copy the object
+    var copiedProducts= Object.assign({},products )
+         console.log(copiedProducts)
+        copiedProducts.name ="Mounika"
+        console.log(copiedProducts) //{name: 'Mounika', price: '₹19', time: '35-40 mins', rating: '4.3', categories: 'Beverages, Juices', …}
+        console.log(products) //{name: 'Jashan Juice and Pizza one', price: '₹19', time: '35-40 mins', rating: '4.3', categories: 'Beverages, Juices', …}
+        
+    // 2 object.keys() ==> to get the keys of the object in array form
+    var productKeys= Object.keys(products)
+   
+ console.log(productKeys) //['name', 'price', 'time', 'rating', 'categories', 'location', 'img']
+   
+
+    // 3 object.values() ==> to get the values of the object in array form
+    var productValues= Object.values(products)  
+    console.log(productValues) //['Jashan Juice and Pizza one', '₹19', '35-40 mins', '4.3', 'Beverages, Juices', 'Feelkhana', 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2f2a8e30d98db46c6507105f68151cf9']
+   
+   // 4 object.entries() ==> to get the keys and values of the object in array form
+    var productEntries= Object.entries(products)
+    console.log(productEntries)
+    // (7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+    // 0: (2) ['name', 'Jashan Juice and Pizza one']
+    // 1: (2) ['price', '₹19']              
+    // 2: (2) ['time', '35-40 mins']
+    // 3: (2) ['rating', '4.3']
+    // 4: (2) ['categories', 'Beverages, Juices']
+    // 5: (2) ['location', 'Feelkhana']
+    // 6: (2) ['img', 'https://media-assets.swiggy
+
+
+    // 5 object.freeze() ==> to freeze the object (we cant change the values of the object)
+        
+    Object.freeze(products)
+    products.name="mounika"
+    console.log(products) //{name: 'Jashan Juice and Pizza one', price: '₹19', time: '35-40 mins', rating: '4.3', categories: 'Beverages, Juices', …}
+
+   
+   
+   
+   </script>
+</body>
+</html>

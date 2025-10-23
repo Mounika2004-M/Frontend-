@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+ <h2 id="product-id"></h2>
+ <h2 id="product-name"></h2>
+ <h2 id="product-rating"></h2>
+ <h2 id="product-price"></h2>
+<img src=" " id="product-image"  width="150" height="150"/>
+ </div>
+    <script> 
+
+    //object in array
+        var product =[
+            {
+                id:1,
+                name:"washingMacine",
+                price:"20000",
+                ratingCount:789,
+                imageurl:"https://storage.beko.co.uk/blomberg2018products/large/Blomberg_WashingMachine_LWF411452AW_White_AngledClosed.jpg"
+
+
+            }
+        ]
+            console.log(product[0].id)
+            console.log(product[0].name)
+            console.log(product[0].price)
+            console.log(product[0].ratingCount)
+            console.log(product[0].imageurl)
+
+            document.getElementById('product-id').innerHTML=product[0].id
+            document.getElementById('product-name').innerHTML=product[0].name
+            document.getElementById('product-price').innerHTML=product[0].price
+            document.getElementById('product-rating').innerHTML=product[0].ratingCount
+            document.getElementById('product-image').src=product[0].imageurl
+
+    
+
+
+
+    </script>
+</body>
+</html>

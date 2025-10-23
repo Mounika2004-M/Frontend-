@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var products = [
+  { name: "eroduct A", ratingCount: 50, price: 200, discount: 10, createdDate: "2025-08-01" },
+  { name: "mroduct B", ratingCount: 30, price: 150, discount: 5, createdDate: "2025-08-05" },
+  { name: "aroduct C", ratingCount: 100, price: 300, discount: 20, createdDate: "2025-07-28" },
+];
+
+var sortedTransactuions = products.sort(function(a,b){
+    return a.name.localeCompare(b.name) // localeCompare() ==> it will sort the string in ascending order.  its a string method
+})
+console.log(sortedTransactuions)
+
+var sortedTransactuions = products.sort(function(a,b){
+    return a.ratingCount - b.ratingCount    
+})
+console.log(sortedTransactuions)
+
+var sortedTransactuions = products.sort(function(a,b){
+    return a.price - b.price
+})
+console.log(sortedTransactuions)
+var sortedTransactuions = products.sort(function(a,b){
+    return a.discount - b.discount
+})          
+console.log(sortedTransactuions)
+var sortedTransactuions = products.sort(function(a,b){
+    return new Date(a.createdDate) - new Date(b.createdDate)  // converting string to date object
+})  
+console.log(sortedTransactuions)
+
+    </script>
+</body>
+</html>

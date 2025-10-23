@@ -1,0 +1,44 @@
+<!-- // event ==> userintraction to the application 
+// like 1==> on load 2==>on click 3==>on change  4==>on key up  5==>on blur
+syntax ===> <tagname event=value></tagname> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- working with event  ==> event is "onclick"  -->
+<button onclick="registerUser">Register </button>
+
+
+<!-- working with event  ==> event is "onclick"  -->
+ <h2><span id="fullName"></span></h2>
+ <button onclick="displayFullName">Display FullName</button>
+
+
+
+    <script>
+
+   
+        function registerUser(){
+            console.log('registering user...')
+        }
+        
+
+    
+      
+       function displayFullName(){
+        var fname='mounika'
+        var lname="reddy"
+        var fullName=fname+' '+lname
+       
+
+       document.getElementById('fullName').innerHTML=fullName
+       }
+
+    </script>
+</body>
+</html>

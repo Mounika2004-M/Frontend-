@@ -1,0 +1,12 @@
+ul{
+    width:300px
+}
+li{
+    padding: 12px 0px;
+    border-bottom: 1px solid gray;
+
+}
+.active{
+    background-color: blue;
+    color: white;
+}

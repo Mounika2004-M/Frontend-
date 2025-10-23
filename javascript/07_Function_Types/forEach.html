@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [
+  {
+    id: 1,
+    name: "Rahul Sharma",
+    age: 20,
+    course: "Computer Science",
+    available: true
+  },
+  {
+    id: 2,
+    name: "Priya Verma",
+    age: 22,
+    course: "Electronics",
+    available: false
+  },
+  {
+    id: 3,
+    name: "Amit Kumar",
+    age: 19,
+    course: "Mechanical Engineering",
+    available: true
+  },
+  {
+    id: 4,
+    name: "Sneha Reddy",
+    age: 21,
+    course: "Information Technology",
+    available: false
+  }
+];
+ for(var i=0;i<students.length;i++){
+    console.log("student ",i+1,":")
+    console.log("-------------")
+     console.log(students[i].name)
+      console.log(students[i].age)
+     console.log(students[i].course)
+    console.log(students[i].available)
+ }
+
+ // using forEach method
+  students.forEach(function(student, index){
+    console.log(student)
+
+
+  })
+
+    // o/p ==> {id: 1, name: 'Rahul Sharma', age: 20, course: 'Computer Science', available: true}
+
+
+
+ var availableStdents=[]
+ var notAvailableStudents=[]
+ for(var i=0;i<students.length;i++){
+     if(students[i].available){
+         availableStdents.push(students[i])
+     }
+     else{
+         notAvailableStudents.push(students[i])
+     }                      
+
+ }
+ console.log("available students: ",availableStdents)
+ console.log("not available students: ",notAvailableStudents)
+
+
+ //with filter method
+    var availableStudents=students.filter(function(student, index){
+        return student.available
+    })
+console.log("available students using filter method: ",availableStudents)
+// o/p ==> available students using filter method:  (2) [{…}, {…}]
+ 
+var notAvailableStudents=students.filter(function(student, index){
+        return !student.available
+    })
+
+
+// using forEach method
+students.forEach(function(student, index){
+     console.log("student ",i+1,":")
+    console.log("-------------")
+     console.log(student.name)
+      console.log(student.age)
+     console.log(student.course)
+    console.log(student.available)
+
+})
+
+
+
+
+
+    </script>
+</body>
+</html>
