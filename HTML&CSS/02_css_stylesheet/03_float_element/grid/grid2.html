@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: bisque;
+            text-align: center;
+        }
+        .gridcontainer{
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            background-color:navajowhite;
+            row-gap: 5px;
+            column-gap: 50px;
+            margin: 10px;
+        
+        }
+        .gridcontainer>.item{
+            background-color: aqua;
+            border: 2px solid red ;
+            height: 500px;
+           
+            
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Courses </h1>
+    <div class="gridcontainer">
+        <div class="div item1"></div>
+        <div class="div item2">item2</div>
+        <div class="div item3">item3</div>
+        <div class="div item4">item4</div>
+        <div class="div item5">item5</div>
+        <div class="div item6">item6</div>
+        <div class="div item7">item7</div>
+        <div class="div item8">item8</div>
+
+    </div>
+</body>
+</html>

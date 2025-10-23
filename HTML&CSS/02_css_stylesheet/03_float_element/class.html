@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class car{
+            tyers=4
+            static topspeed=250
+            constructor(color){
+                this.color=color
+                console.log(`car created with ${this.color} color`)
+            }
+            strat(){
+                return `${this.color} car staerted`
+            }
+            stop(){
+                return `${this.color} car staerted`
+            }
+            shoowColour(){
+                return `this.color`
+
+            }
+            setColor(color){
+                this.color=color
+                console.log(`car color changed to  ${this.color} color`)
+            }
+            static chnageTopSpeed(speed){
+           car.topspeed=speed
+            }
+            showTopSpeed(){
+                return car.topspeed
+            }
+                
+        }
+        
+    </script>
+</body>
+</html>

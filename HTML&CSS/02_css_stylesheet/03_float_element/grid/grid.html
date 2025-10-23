@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1 {
+            grid-area: header;
+            height: 60%;
+            background-color: lightblue;
+        
+        }
+
+        .item2 {
+            grid-area: menu;
+            background-color: lightgreen;
+            height: 40%;
+            
+        }
+        .item3 {
+            grid-area: left1;
+            background-color: rgb(237, 227, 227);
+            height: 500px;
+            width:85%;
+            
+
+        }
+        .item4 {
+            grid-area: main1;
+            background-color: rgb(234, 220, 220);
+        }
+        .item5{
+            grid-area: left2;
+            height: 200px;
+            background-color: azure;
+        }
+        .item6{
+            grid-area: main2;
+           background-color: azure;
+        }
+    
+        .item7{
+             background-color: azure;
+            grid-area: left3;
+        }
+        .gridContainer {
+             display: grid;
+            grid-template-areas: 'header header header header header header header header'
+                                    'menu menu menu menu menu menu menu menu'
+                                    'left1 left1 main1 main1 main1 main1 main1 main1'
+                                    'left2 left2 left2 main2 main2 main2 left3 left3';
+            gap:1px;
+            text-align: center;
+            background-color: aquamarine;                                                   
+            
+        }
+        .gridContainer>div{
+           
+             margin: 10px;
+            padding: 20px; 
+            line-height: 50px;
+            ;
+        }
+    </style>
+</head>
+<body>
+    <div class="gridContainer">
+        <div class="item1">header</div>
+        <div class="item2">menu</div>"
+        <div class="item3">left1</div>
+        <div class="item4">main1</div>
+        <div class="item5">left2</div>
+        <div class="item6">main2</div>
+        <div class="item7">left3</div>
+       
+    </div>
+    
+    
+</body>
+</html>

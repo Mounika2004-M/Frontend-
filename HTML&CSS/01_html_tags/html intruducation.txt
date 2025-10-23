@@ -1,0 +1,25 @@
+ ->  What is html.....
+
+HTML stands for HyperText Markup Language.
+It is the standard language used to create and design the structure of web pages.
+
+It tells the web browser how to display text, images, links, and other content.
+
+HTML uses tags (like <p>, <h1>, <img>, etc.) to mark up different elements on the page.
+
+The internet is a global network of interconnected computer systems that allows for the exchange of information and communication between users. It is a vast infrastructure that enables the transmission of data, voice, and video across the world.
+
+A web is a collection of interconnected documents and resources, such as web pages, images, and multimedia content, that are accessed through the internet using a web browser.
+
+A web page is a document on the web that is written in HTML (HyperText Markup Language) and can be viewed using a web browser. It typically contains text, images, and other multimedia elements, and is linked to other web pages through hyperlinks.
+
+A browser is a software application that allows users to access and view web pages on the internet. Popular web browsers include Google Chrome, Mozilla Firefox, and Microsoft Edge.
+
+HTTP (Hypertext Transfer Protocol) is a protocol used for transmitting web pages and other resources over the internet. It is the foundation of data communication on the web and allows for the exchange of information between web servers and web browsers.
+
+HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses encryption to protect the transmission of data between web servers and web browsers. It is commonly used for online transactions and sensitive information.
+
+A client is a computer or device that accesses services and resources on a network, such as a web server. In the context of the internet, a client typically refers to a web browser or other software application that requests and receives information from a web server.
+
+A server is a computer or software that stores and delivers HTML documents (and other resources like CSS, images, JS).
+When a browser requests an HTML page (by entering a URL), the server sends that HTML file back to the browser.

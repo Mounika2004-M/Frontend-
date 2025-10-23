@@ -1,0 +1,50 @@
+body{
+    margin: 30px;
+
+}
+
+#products{
+    margin: 10px;
+    /* border: 2px solid black; */
+
+}
+
+#product1{
+   
+    float: left;
+    width: 50% ;
+    margin-right: 200px;
+
+}
+
+#product2 img{
+   
+    
+    width: 20% ;
+    height: 300px;
+
+}
+.product11{
+    
+    float: left;
+    width: 30% ;
+    margin: 30px;
+    
+
+
+}
+
+.product12{
+  
+    float: right;
+    width: 30% ;
+    margin: 30px;
+
+
+}
+
+
+
+
+
+

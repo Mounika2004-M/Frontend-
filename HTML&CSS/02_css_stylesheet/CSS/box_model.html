@@ -1,0 +1,44 @@
+<!-- What is the CSS Box Model?
+The CSS Box Model is a fundamental concept that defines how elements are displayed on a web page.
++------------------------------+
+|          Margin              |
+|  +------------------------+  |
+|  |       Border           |  |
+|  |  +------------------+  |  |
+|  |  |   Padding         |  |  |
+|  |  |  +------------+   |  |  |
+|  |  |  |  Content    |   |  |  |
+|  |  |  +------------+   |  |  |
+|  |  +------------------+  |  |
+|  +------------------------+  |
++------------------------------+
+
+Content     	The actual content (like text, image, etc.) inside the box
+Padding	        Space between content and border (adds inner space)
+Border	        The line that surrounds the padding (optional, can have color/thickness)
+Margin	        Space outside the border, used to create distance between elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgray ;
+    
+    }
+    h1{
+        width: 100%;
+        font-family: Arial, sans-serif;
+        padding: 20px 30px 50px 40px;
+        border: 2px groove rgb(42, 92, 198);
+        margin: 30px;
+    }
+</style>
+<body>
+    <h1>WELCOME</h1>
+</body>
+</html>
